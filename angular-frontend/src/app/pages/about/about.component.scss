@@ -1,0 +1,130 @@
+.landing-container {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+
+  .hero-section {
+    position: relative;
+    background: url('/assets/fitness-hero.jpg') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      padding: 0 2rem;
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+      }
+
+      .cta-button {
+        background: #ff6347;
+        border: none;
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background: #e5533d;
+        }
+      }
+    }
+  }
+
+  .features-section {
+    padding: 4rem 2rem;
+    background: #f9f9f9;
+    text-align: center;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+
+      .feature-card {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        transition: transform 0.3s;
+
+        &:hover {
+          transform: translateY(-5px);
+        }
+
+        h3 {
+          margin-bottom: 1rem;
+          color: #ff6347;
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+
+          li {
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .cta-section {
+    background: #ff6347;
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .cta-button {
+      background: white;
+      color: #ff6347;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background: #ffe4e1;
+      }
+    }
+  }
+}

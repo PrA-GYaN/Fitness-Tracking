@@ -94,16 +94,6 @@ MySQL setup using `database/schema.sql` and `seed.sql`
 
 Make sure to match DB credentials in the `.env` file.
 
-📁 Project Structure
-
-fitness-training-portal/
-├── angular-frontend/   # Angular frontend app
-├── php-backend/        # Laravel backend API
-├── database/           # SQL schema and seeders
-├── docs/               # Wireframes, specs
-└── README.md
-
-
 📜 License
 MIT License. You are free to use, modify, and distribute.
 
