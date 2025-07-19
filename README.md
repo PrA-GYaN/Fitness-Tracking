@@ -1,59 +1,113 @@
-# FitnessTracking
+# 🏋️‍♂️ Fitness Training Portal
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
+A full-featured fitness training platform built using **Angular**, **PHP (Laravel)**, and **MySQL**. Users can register, follow custom workout programs, track fitness progress, and follow personalized nutrition plans. Trainers can create and manage training content, while admins oversee the platform.
 
-## Development server
+---
 
-To start a local development server, run:
+## 📌 Features
 
+### 👤 General
+- JWT Authentication (Login/Register)
+- Role-based Access (Admin, Trainer, User)
+- Mobile-responsive frontend (Angular + Material)
+- In-app notifications and email support
+
+### 🧑‍💪 Users (Trainees)
+- Browse and enroll in workout programs
+- Track daily workouts (reps, sets, weight)
+- Access personalized nutrition/diet plans
+- Progress dashboard and achievements
+
+### 👨‍🏫 Trainers
+- Create workout programs with videos and schedules
+- Assign nutrition plans to users
+- Monitor user progress
+- Respond to user questions
+
+### 👨‍💼 Admin
+- Manage users and roles
+- Approve/Reject trainer programs
+- View analytics and reports
+- Content moderation tools
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer         | Technology                         |
+|---------------|-------------------------------------|
+| Frontend      | Angular 17 + Angular Material       |
+| Backend       | PHP (Laravel 10)                    |
+| Database      | MySQL                               |
+| Auth          | JWT-based authentication            |
+| Media Storage | Local (uploads/) or AWS S3          |
+| Charts        | Chart.js / ngx-charts               |
+
+---
+
+## 🚀 Getting Started
+
+### 📦 Requirements
+- Node.js (18+)
+- PHP (8.1+)
+- Composer
+- MySQL (5.7 or 8.x)
+
+### 🔧 Setup Instructions
+
+#### 1. Clone the Repository
 ```bash
+git clone https://github.com/your-username/fitness-training-portal.git
+cd fitness-training-portal
+```
+
+#### 2. Setup the Angular Frontend
+```bash
+cd angular-frontend
+npm install
 ng serve
 ```
+App will run at: [http://localhost:4200](http://localhost:4200)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+#### 3. Setup the Laravel Backend
 ```bash
-ng generate component component-name
+cd ../php-backend
+composer install
+cp .env.example .env
+php artisan key:generate
 ```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
+Edit the `.env` file and update the following lines with your MySQL credentials:
+```env
+DB_DATABASE=fitness_portal
+DB_USERNAME=root
+DB_PASSWORD=your_password
+```
+Then run the migrations and seeders:
 ```bash
-ng generate --help
+php artisan migrate --seed
+php artisan serve
 ```
+API will run at: [http://localhost:8000](http://localhost:8000)
 
-## Building
+#### 4. Database
+MySQL setup using `database/schema.sql` and `seed.sql`
 
-To build the project run:
+Make sure to match DB credentials in the `.env` file.
 
-```bash
-ng build
-```
+📁 Project Structure
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+fitness-training-portal/
+├── angular-frontend/   # Angular frontend app
+├── php-backend/        # Laravel backend API
+├── database/           # SQL schema and seeders
+├── docs/               # Wireframes, specs
+└── README.md
 
-## Running unit tests
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+📜 License
+MIT License. You are free to use, modify, and distribute.
 
-```bash
-ng test
-```
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Let me know if you want this tailored for **plain PHP** instead of Laravel, or if you’d like a **GitHub README badge setup** (CI, version, license, etc.) included!
